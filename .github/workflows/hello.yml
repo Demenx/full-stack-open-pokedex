@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Date
         run: |
-          echo date
+          echo "$date"
   content:
     runs-on: ubuntu-20.04
     steps:
