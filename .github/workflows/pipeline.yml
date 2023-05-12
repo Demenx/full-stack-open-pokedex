@@ -10,11 +10,8 @@ jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Render Deploy Action
+        uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          node-version: '16'
-      - name: Install dependencies 
-        run: npm install  
-      - name: Check style
-        run: npm run eslint
+          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.RENDER_API_KEY }}
