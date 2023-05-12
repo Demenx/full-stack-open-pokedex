@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Render Deploy Action
-        run: curl ${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
+        run: curl https://api.render.com/deploy/srv-cheqqvm4dad1jqfnn950?key=G9j99Lq1Aew
